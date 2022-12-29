@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Nav() {
+  const router = useRouter();
+  console.log(router.query);
   return (
     <nav>
       <Link href="/">
@@ -10,8 +13,8 @@ export default function Nav() {
         <a>About</a>
       </Link>
       <style jsx>{`
-        nav {
-          margin: auto;
+        a:hover {
+          color: red;
         }
       `}</style>
     </nav>
